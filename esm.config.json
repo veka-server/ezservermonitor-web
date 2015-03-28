@@ -6,13 +6,14 @@
         "auto_refresh": 0
     },
     "disk": {
-        "show_tmpfs": false
+        "show_tmpfs": true
     },
     "ping": {
         "hosts": [
-            "facebook.com",
             "google.com",
-            "yahoo.com"
+            "veka-server.com",
+            "macwarrior.fr",
+            "cdjudo61.fr"
         ]
     },
     "last_login": {
@@ -20,32 +21,17 @@
     },
     "services": [
         {
-            "name": "Web Server",
+            "name": "Apache",
             "host": "localhost",
             "port": 80
         },
         {
-            "name": "Email Server (incoming)",
-            "host": "localhost",
-            "port": 993
-        },
-        {
-            "name": "Email Server (outgoing)",
-            "host": "localhost",
-            "port": 587
-        },
-        {
-            "name": "FTP Server",
-            "host": "localhost",
-            "port": 21
-        },
-        {
-            "name": "Database Server",
+            "name": "MySQL",
             "host": "localhost",
             "port": 3306
         },
         {
-            "name": "SSH Service",
+            "name": "SSH",
             "host": "localhost",
             "port": 22
         }

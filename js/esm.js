@@ -244,6 +244,27 @@ esm.getAll = function() {
     esm.getNetwork();
     esm.getPing();
     esm.getServices();
+    esm.getTemp();
+}
+
+esm.getTemp = function() {
+    $.get('libs/temp.php', function(datas) {
+        var $box = $('.box#esm-temp .box-content tbody');
+        $box.find('tr').remove();
+        for (var item in datas)
+        {
+            if(datas[item] == '')
+                return; 
+
+            var html = '';
+            html += '<tr>';
+            html += '<td>'+datas[item][0]+'</td>';
+            html += '<td>'+datas[item][1]+'</td>';
+            html += '</tr>';
+
+            $box.append(html);
+        }
+    }, 'json');
 }
 
 esm.reloadBlock = function(block) {
@@ -294,5 +315,6 @@ esm.mapping = {
     last_login: esm.getLast_login,
     network: esm.getNetwork,
     ping: esm.getPing,
+    temp: esm.getTemp,
     services: esm.getServices
 };

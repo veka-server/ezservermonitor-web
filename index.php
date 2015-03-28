@@ -300,6 +300,27 @@ $update = $Config->checkUpdate();
 
     <div class="cls"></div>
 
+    <div class="t-center">
+        <div class="box" id="esm-temp">
+            <div class="box-header">
+                <h1>Temperature</h1>
+                <ul>
+                    <li><a href="#" class="reload" onclick="esm.reloadBlock('temp');"><span class="icon-cycle"></span></a></li>
+                </ul>
+            </div>
+
+            <div class="box-content">
+                <table>
+                    <tbody>                    
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="cls"></div>
+
 
     <div class="t-center">
         <div class="box column-left column-33" id="esm-last_login">
@@ -354,9 +375,8 @@ $update = $Config->checkUpdate();
 
     </div>
 
-    
-
     <div class="cls"></div>
+
 
 </div>
 
